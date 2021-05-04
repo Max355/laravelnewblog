@@ -1,18 +1,10 @@
 <?php
 
-
-
-
 namespace App\Observers;
 
 
-
-
 use App\Models\BlogPost;
-
 use Carbon\Carbon;
-
-
 
 
 class BlogPostObserver
@@ -44,9 +36,6 @@ class BlogPostObserver
 
     }
 
-
-
-
     /**
 
      * якщо поле published_at порожнє і нам прийшло 1 в ключі is_published,
@@ -70,8 +59,6 @@ class BlogPostObserver
         }
 
     }
-
-
 
 
     /**
@@ -99,8 +86,6 @@ class BlogPostObserver
     }
 
 
-
-
     /**
 
      * Handle the BlogPost "created" event.
@@ -120,8 +105,6 @@ class BlogPostObserver
         //
 
     }
-
-
 
 
     /**
@@ -145,8 +128,6 @@ class BlogPostObserver
     }
 
 
-
-
     /**
 
      * Handle the BlogPost "deleted" event.
@@ -167,9 +148,6 @@ class BlogPostObserver
 
     }
 
-
-
-
     /**
 
      * Handle the BlogPost "restored" event.
@@ -189,8 +167,6 @@ class BlogPostObserver
         //
 
     }
-
-
 
 
     /**
