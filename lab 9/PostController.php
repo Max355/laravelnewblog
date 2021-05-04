@@ -98,3 +98,22 @@ class PostController extends BaseController
         $result = $item->update($data); //оновлюємо дані об'єкта і зберігаємо в БД
 
         if ($result) {
+             return redirect()
+                ->route('blog.admin.posts.edit', $item->id)
+                ->with(['success' => 'Успішно збережено']);
+        } else {
+            return back()
+                ->with(['msg' => 'Помилка збереження'])
+                ->withInput();
+        }
+    }
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
